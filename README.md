@@ -1,4 +1,4 @@
-#Image Grid Tool
+# Image Grid Tool
 #### Video Demo:  <[YouTube Video](https://www.youtube.com/watch?v=wDxWb2pdVbw)>
 #### Description:
 
@@ -11,5 +11,20 @@ I made the tool in PHP, because it is used at my work and I would like to get a 
 In the index.php file, the first check is if you are logged in, if you are not you will get to choose to loging or register.
 For each view a made a file, like loging.php and register.php. For the form handling i made a seperate php file in a folder called 'includes', so this functionallity is seperate from the view.
 
-If the user registered or logged in, they get to see the form to add images, and also they can see their previous uploaded images
+In the login.inc.php en register.inc.php files I check if the inputs are correct and if not the right error message is shown.
+If the input is valid first the paswordt will be hashed, with a build in funtion from php.
+Then the username, password, email will be added to the database.
+
+I used Xampp to create a local environment and datebase. The database has 2 tables: users and images
+Images has a column 'user_id' which has a foreign key which reference the user table 'id'
+
+When logged in, all images which have a user_id of the current user will be shown.
+
+If the user registered or logged in, they get to see the form to add images, and also they can see their previous uploaded images.
+
+To get the grid on the images, i installed a GD library, which gives defferent function to add the lines to the images.
+Then I added an entry to the database table 'images', which contains the user id who uploaded the images, an image name and an image id
+
+The image is saved in a folder in the project, each user has a folder named after their user id, the image name is the id of the image.
+The image source is dynamicly created using the path images/{userid}/{imageId}.
 
