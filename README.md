@@ -74,7 +74,12 @@ I am planning on adding more functionalities to the tool:
 
 I also plan to add more code improvements:
 * Better authorization
-* Password 
+* Password restrictions (min. charcter amount, special character etc.)
+
+I also want to order the code a little bit better, some php functionallity could be in a seperate file (like in the image_grid.php), so views and inc files are better seperated.
+
+Because it is 31th of december I need to enter the project, but i am happy with how it works now, i already used it seriously a couple times.
+There are similar tool on the internet,but i liked it that i can change it as much as i would like.
 
 
 
