@@ -25,8 +25,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         if (!password_verify($password, $user["pw"])) {
-            echo "Incorrect password";
-            return;
+            header("Location: ../error.php");
+            exit;
         }
         
         session_start();
